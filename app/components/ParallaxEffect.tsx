@@ -109,13 +109,13 @@ export default function ParallaxEffect(){
             <ParallaxLayer offset={2} speed={0}>
                 <div className="pt-20 mx-10 sm:mx-15">
                     <section className="pb-200  text-white">
-                        <h1 className="text-4xl">
-                            <span className="font-extrabold">HELLO</span> This is a test run of the font
+                        <h1 className="text-4xl font-extrabold">
+                            Enter The Dungeon...
                         </h1>
 
-                        <p className="text-2xl">
-                            HELLO, This is a test run of the font
-                        </p>
+                        <button>
+                            
+                        </button>
                     </section>
                 </div>
             </ParallaxLayer>

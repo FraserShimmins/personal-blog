@@ -1,16 +1,20 @@
-
+import Image from "next/image";
 
 export default function HeroSection() {
     
     return (
-        <section className="text-white">
-            <h1 className="text-4xl">
-                <span className="font-extrabold">HELLO</span> This is a test run of the font
-            </h1>
+        <section className="text-[#a2b8b1] min-h-screen">
+            <div className="flex flex-col items-center pt-10 text-3xl md:text-6xl gap-7">
+                <h1 className="text-center">Welcome to the Blog Dungeon!</h1>
 
-            <p className="text-2xl">
-                HELLO, This is a test run of the font
-            </p>
+                <div className="relative w-[6em] h-[6em]">
+                    <Image
+                        src="/images/EntranceCover.svg"
+                        fill
+                        alt="Logo"
+                    />
+                </div>
+            </div>
         </section>
     );
 };
