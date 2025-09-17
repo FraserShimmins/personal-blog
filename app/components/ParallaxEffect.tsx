@@ -1,6 +1,7 @@
 'use client'
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import DungeonEntrance from '../ui/DungeonEntrance';
 
 export default function ParallaxEffect(){
 
@@ -107,16 +108,9 @@ export default function ParallaxEffect(){
 
             {/* “Section below” goes here */}
             <ParallaxLayer offset={2} speed={0}>
-                <div className="pt-20 mx-10 sm:mx-15">
-                    <section className="pb-200  text-white">
-                        <h1 className="text-4xl font-extrabold">
-                            Enter The Dungeon...
-                        </h1>
-
-                        <button>
-                            
-                        </button>
-                    </section>
+                <div className="flex flex-col items-center pt-30 text-3xl md:text-6xl gap-7 text-white">
+                    <h1 className="text-center">Enter The Dungeon!</h1>
+                    <DungeonEntrance href="/main"/>  
                 </div>
             </ParallaxLayer>
         </Parallax>
