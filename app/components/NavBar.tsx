@@ -11,17 +11,17 @@ const linksData = [
     {
         id: 1,
         text: "About",
-        link: "/main",
+        link: "/about/#about-section",
     },
     {
         id: 2,
         text: "Articles",
-        link: "/main",
+        link: "/main/#article-section",
     },
     {
         id: 3,
         text: "Credits",
-        link: "/main",
+        link: "/credits/#credit-section",
     },
 ]
 
@@ -33,7 +33,7 @@ export default function NavBar(){
         <nav className="fixed top-0 left-0 right-0 z-15 bg-[#19374b]/90">
             <div className="flex flex-wrap items-center justify-between mx-auto py-1 px-5 md:px-10">
                 {/*Site Logo*/}
-                <Link href='' className="text-2xl text-white font-semibold rounded-sm hover:bg-slate-800 px-2 active:bg-slate-900 flex gap-2 items-center">
+                <Link href='/main/#welcome-section' className="text-2xl text-white font-semibold rounded-sm hover:bg-slate-800 px-2 active:bg-slate-900 flex gap-2 items-center">
                     
                     <div className="relative w-[2em] h-[2em]">
                         <Image

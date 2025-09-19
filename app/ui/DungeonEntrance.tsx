@@ -33,6 +33,9 @@ export default function DungeonEntrance({ href }: props){
                 onMouseEnter={() => {
                     setRunning(true);
                 }}
+                onMouseDown={() => {
+                    setRunning(true);
+                }}
                 // flip the "open" state when the animation finishes & reset animation so it can replay next hover
                 onAnimationEnd={() => {
                     setOpen(!open);

@@ -1,5 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faMugHot } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeroSection() {
 
@@ -10,52 +12,46 @@ export default function HeroSection() {
             
             {/* Section 1 Credit */}
             <div className="flex items-center justify-start md:justify-center h-full">
-                <h2>Fraser Shimmins</h2>
+                <Link href="https://www.frasershimmins.com/" className="hover:text-white">
+                    Fraser Shimmins
+                </Link>
             </div>
         
             {/* Section 2 Socails*/}
             <div className="flex flex-row md:flex-col w-full h-full items-center gap-6 md:gap-4 whitespace-nowrap">
-                <p>All About Me</p>
+                <p>All About Me:</p>
                     
-                <div className="flex gap-2 md:gap-4 w-full justify-start md:justify-center row-start-2">
+                <div className="flex gap-4 w-full justify-start md:justify-center row-start-2">
                      
-                    <Link href="/" className="relative w-[1.5em] h-[1.5em] m-3">
-                        <Image
-                            src="/images/instagram.svg"
-                            fill
-                            alt="Logo"
-                        /> 
+                    <Link href="/" className="relative w-[1.5em] h-[1.5em] hover:text-white">
+                        <FontAwesomeIcon icon={faInstagram} />
                     </Link>
 
-                    <Link href="/" className="relative w-[1.5em] h-[1.5em] m-3">
-                        <Image
-                            src="/images/github.svg"
-                            fill
-                            alt="Logo"
-                        /> 
+                    <Link href="/" className="relative w-[1.5em] h-[1.5em] hover:text-white">
+                        <FontAwesomeIcon icon={faGithub} />
                     </Link>
 
-                    <Link href="/" className="relative w-[1.5em] h-[1.5em] m-3">
-                        <Image
-                            src="/images/buymeacoffee.svg"
-                            fill
-                            alt="Logo"
-                        /> 
+                    <Link href="/" className="relative w-[1.5em] h-[1.5em] hover:text-white">
+                        <FontAwesomeIcon icon={faLinkedin} />
+                    </Link>
+
+                    <Link href="/" className="relative w-[1.5em] h-[1.5em] hover:text-white">
+                        <FontAwesomeIcon icon={faMugHot} />
                     </Link>
                 </div>
             </div>
                 
             {/* Section 3 Navigation */}
             <div className="flex flex-row md:flex-col w-full h-full justify-center items-center gap-4 whitespace-nowrap">
-                <p>Site Links</p>
+                <p>Site Links:</p>
                     
                 <div className="row-start-2 w-full px-6 md:px-12 text-lg md:text-4xl">
                     <div className="flex w-full items-center">
-                        <Link className="flex-1 basis-0 text-center hover:text-white" href="">About</Link>
+                        <Link className="flex-1 basis-0 text-center hover:text-white" href="/about/#about-section">About</Link>
                         <span className="mx-4 block h-1.5 w-1.5 rounded-full bg-[#a2b8b1]" />
-                        <Link className="flex-1 basis-0 text-center hover:text-white" href="">Articles</Link>
+                        <Link className="flex-1 basis-0 text-center hover:text-white" href="/main/#article-section">Articles</Link>
                         <span className="mx-4 block h-1.5 w-1.5 rounded-full bg-[#a2b8b1]" />
-                        <Link className="flex-1 basis-0 text-center hover:text-white" href="">Credits</Link>
+                        <Link className="flex-1 basis-0 text-center hover:text-white" href="/credits/#credit-section">Credits</Link>
                     </div>
                 </div>
             </div>
