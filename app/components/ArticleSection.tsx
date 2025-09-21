@@ -1,7 +1,23 @@
 import Link from "next/link";
+import BlogCard from "../ui/BlogCard";
+import supabase from "../supabase-client";
 
-export default function ArticleSection() {
-    
+export async function getPosts() {
+  const { data, error } = await supabase
+    .from("posts")
+    .select("title, blurb, date_published, slug") // or list columns if you want type safety
+
+  if (error) {
+    console.error("Error fetching posts:", error.message)
+    return []
+  }
+
+  return data
+}
+
+export default async function ArticleSection() {
+    const posts = await getPosts()
+
     return (
         <section className="text-[#a2b8b1] min-h-screen">
             <div className="flex flex-col items-start textl-xl md:text-3xl gap-7">
@@ -32,6 +48,19 @@ export default function ArticleSection() {
                                 border-r-[12px] border-r-[#1f2439]" 
                     />
                 </Link>
+                
+                {/* All of the Blog post cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3">
+                    {posts.map((post) => (
+                        <BlogCard
+                            key={post.slug}
+                            imgUrl="/placeholder.jpg" // or your cover_image column later
+                            pageUrl={`/blog/${post.slug}`}
+                            title={post.title}
+                            description={post.blurb}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     );
