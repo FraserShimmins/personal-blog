@@ -11,33 +11,28 @@ type propsType = {
 export default function BlogCard({ imgUrl, pageUrl, title, description } : propsType){
     
     return(
-        <div>
-            <div className="border border-white bg-white/80 rounded-t-xl overflow-hidden relative group h-52 md:h-72">
-                {/* Photo*/}
+        <Link href={pageUrl} className="flex flex-col justify-start bg-[#a2b8b1] border-slate-950 border-12
+                transform-gpu transition-transform duration-450 ease-in-out
+                hover:-translate-y-8 overflow-hidden h-100">
+            {/* Photo*/}
+            <div className="p-2">
+                {/* Image box with fixed ratio */}
+                <div className="relative w-full aspect-[16/9] overflow-hidden bg-[#557b78] border-2 border-slate-950">
                 <Image
                     src={imgUrl}
                     alt={title}
                     fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-
-                <Link href={pageUrl}>
-                    <div 
-                    className="absolute top-0 left-0 w-full h-full bg-[#181818] opacity-0 group-hover:opacity-80 flex 
-                    flex-col items-center justify-center transition-all duration-500"
-                    >
-                        {/* Search Icon */}
-                        <h1 className="text-white font-bold w-full text-center text-3xl lg:text-4xl">
-                            {title}
-                        </h1>
-
-                    </div>
-                </Link>
+                </div>
             </div>
 
             {/* Text Content */}
-            <div className="border border-white text-white rounded-b-xl bg-[#181818] py-6 px-4 ">
-                <p className="text-base text-[#ADB7BE]">{description}</p>
+            <div className="py-4 px-6 text-slate-950">
+                <h3 className="text-3xl font-bold mb-2">{title}</h3>
+                <p className="text-lg">{description}</p>
             </div>
-        </div>
+        </Link>
     );
 };

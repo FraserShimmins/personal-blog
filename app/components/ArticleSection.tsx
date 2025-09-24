@@ -50,7 +50,7 @@ export default async function ArticleSection() {
                 </Link>
                 
                 {/* All of the Blog post cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-10">
                     {posts.map((post) => (
                         <BlogCard
                             key={post.slug}
