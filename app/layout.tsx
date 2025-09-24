@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Handjet, Tiny5 } from "next/font/google";
+import { Geist, Geist_Mono, Handjet, Tiny5, Roboto } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,6 +23,11 @@ const tiny5 = Tiny5({
   variable: "--font-tiny5",
 });
 
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Personal Blog",
   description: "Personal Blog of Fraser Shimmins",
@@ -36,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${handjet.variable} ${tiny5.variable} antialiased font-handjet font-semibold`}
+        className={`${geistSans.variable} ${geistMono.variable} ${handjet.variable} ${tiny5.variable} ${roboto.variable} antialiased font-handjet font-semibold`}
       >
         {children}
       </body>

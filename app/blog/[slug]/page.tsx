@@ -72,7 +72,7 @@ export default async function Page({ params }: { params: Params }) {
     <main className="min-h-screen bg-[#1f2439] overflow-x-hidden">
       <NavBar/>
 
-      <div className="pt-20 mx-10 sm:mx-15 pb-20">
+      <div className="pt-20 mx-5 sm:mx-15 pb-20">
         <Article
           title={post.title}
           datePublished={post.date_published}

@@ -44,6 +44,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --font-handjet: var(--font-handjet);
   --font-tiny5: var(--font-tiny5);
+  --font-roboto: var(--font-roboto);
 }
 
 :root {
