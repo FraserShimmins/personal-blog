@@ -27,7 +27,7 @@ export default async function ArticleSection() {
                 </h1>
 
                 {/* Contact Button */}
-                <Link href="/about" className="relative block w-full md:w-fit px-12 py-3 bg-[#19374b] text-[#a2b8b1] hover:bg-slate-900 hover:text-white active:bg-slate-950">
+                <Link href="/contact" className="relative block w-full md:w-fit px-12 py-3 bg-[#19374b] text-[#a2b8b1] hover:bg-slate-900 hover:text-white active:bg-slate-950">
                     <div className="flex justify-center items-center h-full w-full">
                         <p className="relative z-10 text-center">Contact Me</p>
                     </div>
